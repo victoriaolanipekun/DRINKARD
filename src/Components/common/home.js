@@ -7,7 +7,7 @@ import axios from 'axios'
 const Home = () => {
 
   const [cocktails, setCocktails] = useState([])
-  const [formData, setFormdata] = useState([])
+  const [formData, setFormdata] = useState('')
 
   useEffect(() => {
     const getCocktails = async () => {
@@ -21,22 +21,21 @@ const Home = () => {
     getCocktails()
   }, [])
 
-  const searchCocktails = async (value) => {
+  const searchCocktails = async () => {
     try {
-      const { data } = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + value)
+      const { data } = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + formData)
       setCocktails(data)
     } catch (err) {
       console.log(err)
     }
   }
- 
-
 
   const handleChange = (event) => {
     console.log(event.target.value)
     setFormdata(event.target.value)
-    searchCocktails(event.target.value)
+    searchCocktails()
   }
+
 
 
   console.log('cocktail', cocktails)
