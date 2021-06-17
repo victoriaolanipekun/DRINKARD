@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const CheeseCard = ({ idDrink, strDrink, strDrinkThumb, strAlcoholic }) => {
+const CocktailCard = ({ idDrink, strDrink, strDrinkThumb, strAlcoholic }) => {
   return (
     <div className="column is-one-quarter-desktop is-one-third-tablet">
-      <Link to={`/cheeses/${idDrink}`}>
+      <Link to={`/cocktails/${idDrink}`}>
         <div className="card">
           <div className="card-header">
             <div className="card-header-title">{strDrink}</div>
@@ -23,4 +23,4 @@ const CheeseCard = ({ idDrink, strDrink, strDrinkThumb, strAlcoholic }) => {
   )
 }
 
-export default CheeseCard
+export default CocktailCard

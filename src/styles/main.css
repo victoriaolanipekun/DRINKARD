@@ -1,0 +1,52 @@
+.hero {
+  background-image: url("https://i.pinimg.com/originals/fb/a8/78/fba8781b0d7f4ce8db50e9d3bc69fd8f.jpg");
+  background-size: cover;
+}
+
+.field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.drinkard {
+  font-size: 60px;
+  color: #2326b6;
+}
+
+.fade-in {
+  text-align: center;
+  animation: fadein 5s;
+  -moz-animation: fadein 5s;
+  /* Firefox */
+  -webkit-animation: fadein 5s;
+  /* Safari and Chrome */
+  -o-animation: fadein 5s;
+  /* Opera */
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.title {
+  margin-right: 50%;
+}
+/*# sourceMappingURL=main.css.map */

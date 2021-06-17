@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-//import CocktailCard from './CocktailCard'
+import CocktailCard from './CocktailCard'
+
 
 
 
 const Home = () => {
 
   const [cocktails, setCocktails] = useState([])
-  const [formData, setFormdata] = useState('')
+  const [formData, setFormdata] = useState({
+    strDrink: '',
+    strDrinkThumb: '',
+    strAlcoholic: '',
+  })
+  const [hasError, setHasError] = useState(false)
 
   useEffect(() => {
     const getCocktails = async () => {
@@ -15,26 +21,29 @@ const Home = () => {
         const { data } = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
         setCocktails(data)
       } catch (err) {
-        console.log(err)
+        setHasError(true)
       }
     }
+    // console.log('getcocktails', getCocktails)
     getCocktails()
   }, [])
+ 
 
-  const searchCocktails = async () => {
+  const handleChange = (event) => {
+    const newFormData = { ...formdata, [event.target.name]: event.target.value }
+    setFormdata(newFormData)
+    // handleSubmit()
+  }
+
+  const handleSubmit = async () => {
     try {
-      const { data } = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + formData)
+      const { data } = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=', formData)
       setCocktails(data)
     } catch (err) {
-      console.log(err)
+      setHasError(err.response.data.errors)
     }
   }
 
-  const handleChange = (event) => {
-    console.log(event.target.value)
-    setFormdata(event.target.value)
-    searchCocktails()
-  }
 
 
 
@@ -46,47 +55,40 @@ const Home = () => {
           <h1 className="title is-1 has-text-centered">
             <span className="logo-emoji welcome" role="img" aria-label="logo"></span>
             Welcome to <br>
-            </br><span className="drinkard fade-in">DRINKARDDDDD</span>
+            </br><span className="drinkard fade-in">DRINKARD</span>
             <span className="logo-emoji" role="img" aria-label="logo">🍸</span>
           </h1>
         </div>
       </div>
 
-      <div className="columns is-multiline">
+      {/* <div className="columns is-multiline">
         
-      </div>
+      </div> */}
 
       <div className="field has-addons">
         <div className="control">
-          <input className="input is-success has-background-success-light search" type="text" placeholder="Search a cocktail" onChange={handleChange}>
+          <input className="input is-success has-background-success-light search" type="text" placeholder="Search a cocktail" onChange={handleChange} value={formData.strDrink}>
           </input>
         </div>
-        <div className="control">
+        <div className="control" onSubmit={handleSubmit} >
           <a className="button is-info">
             Search
           </a>
         </div>
       </div>
+      {cocktails.length > 0 ?
+        <div className="columns is-multiline">
+          {cocktails.map(cocktail => {
+            return <CocktailCard key={cocktail.idDrink} {...cocktail} />
+          })}
+        </div>
+        :
+        <h2 className="title has-text-centered">
+          {hasError ? 'Something has gone wrong!' : 'loading...🍸'}
+        </h2>
+      }
 
-      {/* <form className="column is-half is-offset-one-quarter">
-        <div className="field has-addons">
-          <label className="label is-1 has-text-centered">Search your favorite cocktail</label>
-          <div className="control">
-            <input className="input is-rounded"
-              type="text"
-              placeholder="type your cocktail">
-
-            </input>
-          </div>
-          <div className="control">
-            <a className="button is-info">Search</a>
-          </div>
-        </div> */}
-
-      {/* <div classNam="field">
-          <button type="submit" className="button is-fullwidth is-warning"></button>
-        </div> */}
-      {/* </form> */}
+    
     </section>
   )
 
