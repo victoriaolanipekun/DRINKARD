@@ -8,11 +8,11 @@ import CocktailCard from './CocktailCard'
 const CocktailIndex = () => {
 
   const [cocktails, setCocktails] = useState([])
-  const [formData, setFormdata] = useState({
-    strDrink: '',
-    strDrinkThumb: '',
-    strAlcoholic: '',
-  })
+  // const [formData, setFormdata] = useState({
+  //   strDrink: '',
+  //   strDrinkThumb: '',
+  //   strAlcoholic: '',
+  // })
   const [hasError, setHasError] = useState(false)
 
   useEffect(() => {
@@ -28,21 +28,21 @@ const CocktailIndex = () => {
   }, [])
 
 
-  const handleChange = (event) => {
-    const newFormData = { ...formData, [event.target.name]: event.target.value }
-    setFormdata(newFormData)
-    console.log(newFormData)
-  }
+  // const handleChange = (event) => {
+  //   const newFormData = { ...formData, [event.target.name]: event.target.value }
+  //   setFormdata(newFormData)
+  //   console.log(newFormData)
+  // }
 
-  const handleSubmit = async () => {
-    event.preventDefault()
-    try {
-      const { data } = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=', formData)
-      setCocktails(data.drinks)
-    } catch (err) {
-      setHasError(err.response.data.errors)
-    }
-  }
+  // const handleSubmit = async () => {
+  //   event.preventDefault()
+  //   try {
+  //     const { data } = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=', formData)
+  //     setCocktails(data.drinks)
+  //   } catch (err) {
+  //     setHasError(err.response.data.errors)
+  //   }
+  // }
 
 
 
@@ -50,12 +50,21 @@ const CocktailIndex = () => {
   console.log('cocktail', cocktails)
   return (
     <section>
+      <div className="container">
+        {cocktails.length > 0 ? 
+          <div className="columns is-multiline">
+            {cocktails.map(cocktail => {
+              return <CocktailCard key={cocktail.idDrink} {...cocktail} />
+            })}
+          </div>
+          :
+          <h2 className="title has-text-centered">
+            {hasError ? 'Something has gone wrong!' : 'loading...🍸'}
+          </h2>
+        }
+      </div>
 
-      {/* <div className="columns is-multiline">
-        
-      </div> */}
-
-      <div className="field has-addons" onSubmit={handleSubmit} >
+      {/* <div className="field has-addons" onSubmit={handleSubmit} >
         <div className="control">
           <input onChange={handleChange} name="strDrink" className="input is-success has-background-success-light search" type="text" placeholder="Search a cocktail" value={formData.strDrink}>
           </input>
@@ -65,19 +74,8 @@ const CocktailIndex = () => {
             Search
           </a>
         </div>
-      </div>
-      {cocktails.length > 0 ? 
-        <div className="columns is-multiline">
-          {cocktails.map(cocktail => {
-            return <CocktailCard key={cocktail.idDrink} {...cocktail} />
-          })}
-        </div>
-        :
-        <h2 className="title has-text-centered">
-          {hasError ? 'Something has gone wrong!' : 'loading...🍸'}
-        </h2>
-      }
-
+      </div> */}
+      
     
     </section>
   )
