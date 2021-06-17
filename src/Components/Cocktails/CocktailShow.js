@@ -25,9 +25,11 @@ const CocktailShow = () => {
     getCocktails()
   }, [id])
 
+  useEffect(() => { 
+    document.body.style.backgroundColor = 'rgb(221, 235, 223)'
+  }, [])
 
 
-  
 
 
   return (
@@ -44,15 +46,15 @@ const CocktailShow = () => {
                 </figure>
               </div>
               <div className="column is-half">
-                <h4 className="title is-4"><span role="img" aria-label="plate">🍸</span> Drink Name</h4>
+                <h4 className="title is-4"><span role="img" aria-label="plate">🍸</span>Name</h4>
                 <p>{cocktail.strDrink}</p>
                 <hr />
-                <h4 className="title is-4"><span role="img" aria-label="globe">🍹</span> Glass Type</h4>
+                <h4 className="title is-4"><span role="img" aria-label="globe"></span>Glass Type</h4>
                 <p>{cocktail.strGlass}</p>
                 <hr />
-              
 
-              
+
+
               </div>
             </div>
           </div>

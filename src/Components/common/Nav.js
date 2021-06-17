@@ -6,13 +6,13 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar is-warning">
+      <nav className="navbar">
         <div className="container-navbar">
           <div className="homepage">
-            <Link to="/" className="navbar-item">
+            <Link to="/" className="navbar-item">            
               <span className="icon-text">
                 <span className="icon">
-                  <i classn="fas fa-home"></i>
+                  <i className="fas fa-home"></i>
                 </span>
                 <span>Home</span>
               </span>
@@ -20,7 +20,8 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="navbar-start">
-            <Link to="/cocktails" className="navbar-item">🍸</Link>
+            <Link to="/cocktails" className="navbar-item">
+              <i className="fa fa-glass " ></i>🍸</Link>
           </div>
         </div>
       </nav>

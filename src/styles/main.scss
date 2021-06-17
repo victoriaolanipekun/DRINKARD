@@ -1,12 +1,14 @@
-// .title { 
-//   font-family: 'Roboto', sans-serif;
-// }
+*{ 
+  font-family:'Times New Roman', Times, serif
+}
 
 .hero{
-  background-image: url('https://i.pinimg.com/originals/fb/a8/78/fba8781b0d7f4ce8db50e9d3bc69fd8f.jpg');
-  // background-repeat: no-repeat;
-  // object-fit: fill;
+  background-image: url('https://mocah.org/uploads/posts/577889-cocktail-4k.jpg');
+  // max-width: 100%;
+  // max-height: 100%;
   background-size: cover;
+  // background-color: burlywood;
+
 }
 
 .field{
@@ -18,7 +20,22 @@
 
 .drinkard {
   font-size: 60px;
-  color:rgb(35, 38, 182)
+  // background:linear-gradient(left, green, yellow, lightblue, red)
+  // background-size, 100%;
+  color: rgb(247, 223, 92)
+  // background-clip, text;
+  
+  
+}
+
+
+.cocktail-image{
+  will-change: transform;
+  transition: transform 430ms;
+}
+.cocktail-image:hover{
+  will-change: transform 120ms;
+  transform: translateY(-5px)
 }
 
 .fade-in {
@@ -36,7 +53,6 @@
   }
   to {
       opacity:1;
-  // }
 }
 }
 
@@ -47,8 +63,42 @@
 .container-navbar{
   display: flex;
   justify-content: center;
-
+}
+nav.navbar{
+  height:10%;
+}
+.navbar-item{
+  margin-right: 20px;
+}
+.icon-text{
+  margin-top: 5px;
 }
 
+div.container{
+  margin-bottom: 30%;
+}
 
+.navbar{
+  border-radius: 2px;
+  background: linear-gradient(12deg, rgb(153, 235, 129), lightblue, rgb(241, 216, 132), lime);
+  background-size: 1000% 1000%;
+  -webkit-animation: AnimationName 49s ease infinite;
+  -moz-animation: AnimationName 49s ease infinite;
+  animation: AnimationName 49s ease infinite;
+}
 
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 65%}
+  50%{background-position:100% 36%}
+  100%{background-position:0% 65%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 65%}
+  50%{background-position:100% 36%}
+  100%{background-position:0% 65%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 65%}
+  50%{background-position:100% 36%}
+  100%{background-position:0% 65%}
+}

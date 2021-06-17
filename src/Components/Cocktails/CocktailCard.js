@@ -9,9 +9,9 @@ const CocktailCard = ({ idDrink, strDrink, strDrinkThumb, strAlcoholic }) => {
           <div className="card-header">
             <div className="card-header-title">{strDrink}</div>
           </div>
-          <div className="card-image">
+          <div className="card-image is-rounded">
             <figure className="image image-is-1by1">
-              <img src={strDrinkThumb} alt={strDrink}/>
+              <img className="is-rounded" src={strDrinkThumb} alt={strDrink}/>
             </figure>
           </div>
           <div className="card-content">
