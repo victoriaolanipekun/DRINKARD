@@ -1,5 +1,5 @@
 * {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .hero {
@@ -18,10 +18,44 @@
 
 .drinkard {
   font-size: 60px;
-  color: #f7df5c;
+  background: -webkit-gradient(linear, right top, left top, color-stop(10%, #000), color-stop(30%, #bada55), color-stop(70%, #bada44), color-stop(80%, #000));
+  background: linear-gradient(to left, #000 10%, #bada55 30%, #bada44 70%, #000 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  -webkit-animation: textShine 45s ease-in-out infinite alternate;
+          animation: textShine 45s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes textShine {
+  to {
+    background-position: 100%;
+  }
+}
+
+@keyframes textShine {
+  to {
+    background-position: 100%;
+  }
+}
+
+.welcome-text {
+  will-change: transform;
+  -webkit-transition: -webkit-transform 630ms;
+  transition: -webkit-transform 630ms;
+  transition: transform 630ms;
+  transition: transform 630ms, -webkit-transform 630ms;
+}
+
+.welcome-text:hover {
+  will-change: transform 250ms;
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
 }
 
 .cocktail-image {
+  margin-top: 20px;
   will-change: transform;
   -webkit-transition: -webkit-transform 430ms;
   transition: -webkit-transform 430ms;
@@ -31,8 +65,17 @@
 
 .cocktail-image:hover {
   will-change: transform 120ms;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+.image-size {
+  width: 20px;
+  height: 20px;
+}
+
+.box-color {
+  background-color: red;
 }
 
 .fade-in {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const CocktailCard = ({ idDrink, strDrink, strDrinkThumb, strAlcoholic }) => {
   return (
-    <div className="column is-one-quarter-desktop is-one-third-tablet">
+    <div className="column is-one-quarter-desktop is-one-third-tablet cocktail-image">
       <Link to={`/cocktails/${idDrink}`}>
         <div className="card">
           <div className="card-header">

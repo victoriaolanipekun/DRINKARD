@@ -52,7 +52,7 @@ const CocktailIndex = () => {
     <section>
       <div className="container">
         {cocktails.length > 0 ? 
-          <div className="columns is-multiline cocktail-image">
+          <div className="columns is-multiline">
             {cocktails.map(cocktail => {
               return <CocktailCard key={cocktail.idDrink} {...cocktail} />
             })}
