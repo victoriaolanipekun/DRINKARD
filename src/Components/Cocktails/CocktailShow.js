@@ -8,6 +8,7 @@ const CocktailShow = () => {
 
   const [cocktail, setCocktail] = useState(null)
   const [hasError, setHasError] = useState(false)
+  // const [ingredients, setIngredients] = useState('')
 
   useEffect(() => {
     const getCocktails = async () => {
@@ -29,8 +30,19 @@ const CocktailShow = () => {
     document.body.style.backgroundColor = 'rgb(221, 235, 223)'
   }, [])
 
+  useEffect(() => {
+    if (!cocktail) return 
+    const entries = Object.entries(cocktail)
+    console.log(entries)
+    const filteredIngredients = entries.filter(ingredient => {
+      if (ingredient[0].includes('strIngredient') && ingredient[1] !== null) {
+        return ingredient
+      }
+    })
+    console.log(filteredIngredients)
+  }, [cocktail])
 
-
+  // create another state for ingredients, when cocktails updates you can also update the state(ingredients)
 
   return (
     <section className="section">
