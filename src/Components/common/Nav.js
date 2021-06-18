@@ -14,14 +14,14 @@ const Navbar = () => {
                 <span className="icon">
                   <i className="fas fa-home"></i>
                 </span>
-                <span>Home</span>
+                <span></span>
               </span>
 
             </Link>
           </div>
           <div className="navbar-start">
             <Link to="/cocktails" className="navbar-item">
-              <i className="fa fa-glass " ></i>🍸</Link>
+              <i className="fa fa-glass"></i>🍸</Link>
           </div>
         </div>
       </nav>

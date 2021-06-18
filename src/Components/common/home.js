@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+
 const Home = () => {
 
 
@@ -12,7 +15,8 @@ const Home = () => {
             <span className="logo-emoji" role="img" aria-label="logo"></span>
           Welcome to <br>
             </br><span className="drinkard fade-in">DRINKARD</span>
-            <span className="logo-emoji" role="img" aria-label="logo">🍸</span>
+            <Link to="/cocktails">
+              <span className="logo-emoji" role="img" aria-label="logo">🍸</span></Link>
           </h1>
         </div>
         

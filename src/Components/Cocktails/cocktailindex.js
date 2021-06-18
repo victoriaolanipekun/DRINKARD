@@ -28,24 +28,6 @@ const CocktailIndex = () => {
   }, [])
 
 
-  // const handleChange = (event) => {
-  //   const newFormData = { ...formData, [event.target.name]: event.target.value }
-  //   setFormdata(newFormData)
-  //   console.log(newFormData)
-  // }
-
-  // const handleSubmit = async () => {
-  //   event.preventDefault()
-  //   try {
-  //     const { data } = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=', formData)
-  //     setCocktails(data.drinks)
-  //   } catch (err) {
-  //     setHasError(err.response.data.errors)
-  //   }
-  // }
-
-
-
 
   console.log('cocktail', cocktails)
   return (
@@ -62,21 +44,7 @@ const CocktailIndex = () => {
             {hasError ? 'Something has gone wrong!' : 'loading...🍸'}
           </h2>
         }
-      </div>
-
-      {/* <div className="field has-addons" onSubmit={handleSubmit} >
-        <div className="control">
-          <input onChange={handleChange} name="strDrink" className="input is-success has-background-success-light search" type="text" placeholder="Search a cocktail" value={formData.strDrink}>
-          </input>
-        </div>
-        <div className="control" >
-          <a className="button is-info">
-            Search
-          </a>
-        </div>
-      </div> */}
-      
-    
+      </div>   
     </section>
   )
 
