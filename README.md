@@ -36,8 +36,7 @@ This was a team of 2 building a React Application which consumed a public API.
  React.js,
  Github/Git
  
- You can find our hosted version here: https://github.com/adrianp2021/DRINKARD
- 
+ You can find our hosted version here: https://drinkard-app.netlify.app
 *APPLICATION OVERVIEW*
  
 DRINKARD is an application which hosts a variety of 25 cocktails. The aim was to get information from a Cocktail API and then building our application.
