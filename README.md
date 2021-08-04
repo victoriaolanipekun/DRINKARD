@@ -53,6 +53,9 @@ As already stated, 25 cocktails will be displayed on the cocktail page; to creat
 
 For each page, we have created distinct components to be able to interact with each page; we named this component CocktailIndex, which is returning a mapped componennt, called CocktailCard:
 
+ 
+![Screenshot 2021-06-18 at 11 27 44](https://user-images.githubusercontent.com/83225952/122547595-37e5ac00-d028-11eb-8890-b9116e5abca3.png)
+
 In the latter we wrote the code so that it renders every cocktail in a column (we styled this with Bulma) ![Screenshot 2021-06-18 at 11 31 00](https://user-images.githubusercontent.com/83225952/122547956-aa568c00-d028-11eb-92f7-27693eceb36a.png)
 
 This allows the user to select any of the cocktails displayed. When hovering over the ABC cocktail, it will be lifted so there is a better correspondence with the user experience.![Screenshot 2021-06-18 at 11 39 36](https://user-images.githubusercontent.com/83225952/122548954-e0484000-d029-11eb-8ae3-6e7589f25c91.png)
