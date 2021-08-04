@@ -51,8 +51,7 @@ As already stated, 25 cocktails will be displayed on the cocktail page; to creat
 
 ![Screenshot 2021-06-18 at 11 14 22](https://user-images.githubusercontent.com/83225952/122545957-59de2f00-d026-11eb-89be-768c49032693.png)
 
-For each page, we have created distinct components to be able to interact with each page; we named this component CocktailIndex, which is returning a mapped componennt, called CocktailCard: 
-![Screenshot 2021-06-18 at 11 27 44](https://user-images.githubusercontent.com/83225952/122547595-37e5ac00-d028-11eb-8890-b9116e5abca3.png)
+For each page, we have created distinct components to be able to interact with each page; we named this component CocktailIndex, which is returning a mapped componennt, called CocktailCard:
 
 In the latter we wrote the code so that it renders every cocktail in a column (we styled this with Bulma) ![Screenshot 2021-06-18 at 11 31 00](https://user-images.githubusercontent.com/83225952/122547956-aa568c00-d028-11eb-92f7-27693eceb36a.png)
 
