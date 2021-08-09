@@ -21,8 +21,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  -->
  
  
-![image](https://user-images.githubusercontent.com/71145696/128151120-b3a88874-26e0-4e8c-b2e1-7dea3d5d3b3a.png)<h1> Project #1: Drinkard </h1>
-This was a team of 2 building a React Application which consumed a public API.
+![image](https://user-images.githubusercontent.com/71145696/128151120-b3a88874-26e0-4e8c-b2e1-7dea3d5d3b3a.png)<h1> Project #2: Drinkard </h1>
+![Application Overview](https://github.com/victoriaolanipekun/PROJECT-1/blob/main/assets/https://github.com/victoriaolanipekun/DRINKARD/blob/master/src/Assets/drinakrd.gif?raw=true)
+
+<h1>Brief</h1>
+
+<p>This was our second project in GA which we were expected to build a React.js app consuming a 3rd party public API, and was to be pair coded in 48 hours.</p>
+
  
 ** Timeframe:**
 2 days
