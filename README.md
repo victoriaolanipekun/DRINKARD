@@ -22,62 +22,184 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  
  
 ![image](https://user-images.githubusercontent.com/71145696/128151120-b3a88874-26e0-4e8c-b2e1-7dea3d5d3b3a.png)<h1> Project #2: Drinkard </h1>
-![Application Overview](https://github.com/victoriaolanipekun/PROJECT-1/blob/main/assets/https://github.com/victoriaolanipekun/DRINKARD/blob/master/src/Assets/drinakrd.gif?raw=true)
+<img src="https://github.com/victoriaolanipekun/DRINKARD/blob/master/src/Assets/homepage.png?raw=true" width=1000 alt=Homepage-Screenshot>
 
 <h1>Brief</h1>
 
 <p>This was our second project in GA which we were expected to build a React.js app consuming a 3rd party public API, and was to be pair coded in 48 hours.</p>
+<h1>Timeframe</h1>
+48 hours
+<h1>Team</h1>
 
- 
-** Timeframe:**
-2 days
- 
-** Technologies used:** 
- 
- HTML,
- CSS + CSS Animation,
- JavaScript,
- Bulma,
- React.js,
- Github/Git
- 
- You can find our hosted version here: https://drinkard-app.netlify.app
- 
-*APPLICATION OVERVIEW*
- 
-DRINKARD is an application which hosts a variety of 25 cocktails. The aim was to get information from a Cocktail API and then building our application.
- 
-Once the page loads, a "Welcome to DRINAKARD 🍸" displays, with the glass being clickable. If the user clicks on the glass, it will direct him/her to the cocktails page. 
-On the top of the page we devised a navbar which is always present, no matter on which section of the page the user is; this way, the user can either return to the homepage (by clicking on the home icon) or click on the glass to redirect to the cocktail page.
+<li>Adrian Pantea - https://github.com/adrianp2021</li>
+<li>Victoria Olanipekun - https://github.com/victoriaolanipekun</li>
 
-*CODING PROCESSES*
+<h1>Deployment</h1>
+<p>You can find our hosted version here: https://drinkard-app.netlify.app</p>
+<p>Repository link: https://github.com/victoriaolanipekun/DRINKARD</p>
 
-As already stated, 25 cocktails will be displayed on the cocktail page; to create a better experience, when the cocktails are hovered over, they are lifted(see below a snippet of the css)
+<h1>Motivation & Introduction</h1>
+<p>This project was my second project for the Software Engineering Immersive course, which was done in a team of 2. The aim was to get information from a third party API and then implement our application creatively. We decided on the cocktail API and named our application DRINKARD.</p>
+<p>DRINKARD is an application which hosts a variety of 25 cocktails. The page loads with a "Welcome to DRINAKARD 🍸" display, with the glass being clickable. If the user clicks on the glass, it will direct him/her to the cocktails page. 
+On the top of the page we devised a navbar which is always present, throughout the different application pages; this way, the user can either return to the homepage (by clicking on the home icon) or click on the glass to redirect to the cocktail page.
+</p>
 
-![Screenshot 2021-06-18 at 11 14 22](https://user-images.githubusercontent.com/83225952/122545957-59de2f00-d026-11eb-89be-768c49032693.png)
-
-For each page, we have created distinct components to be able to interact with each page; we named this component CocktailIndex, which is returning a mapped componennt, called CocktailCard:
-
- 
-![Screenshot 2021-06-18 at 11 27 44](https://user-images.githubusercontent.com/83225952/122547595-37e5ac00-d028-11eb-8890-b9116e5abca3.png)
-
-In the latter we wrote the code so that it renders every cocktail in a column (we styled this with Bulma) ![Screenshot 2021-06-18 at 11 31 00](https://user-images.githubusercontent.com/83225952/122547956-aa568c00-d028-11eb-92f7-27693eceb36a.png)
-
-This allows the user to select any of the cocktails displayed. When hovering over the ABC cocktail, it will be lifted so there is a better correspondence with the user experience.![Screenshot 2021-06-18 at 11 39 36](https://user-images.githubusercontent.com/83225952/122548954-e0484000-d029-11eb-8ae3-6e7589f25c91.png)
+<h1>Technologies used</h1>
+<li>HTML5</li>
+<li>CSS3</li>
+<li>CSS Animation</li>
+<li>SASS</li>
+<li>Bulma</li>
+<li>JavaScript(ES6)</li>
+<li>React JavaScript</li>
+<li>axios (for API requests)</li>
+<li>Chrome</li>
+<li>Insomnia</li>
+<li>Git & GitHub</li>
 
 
-When clicking on any cocktail, a corresponding page will open with information on that cocktail.
+<h1>Demonstration of the App Flow</h1>
+<img src="https://github.com/victoriaolanipekun/DRINKARD/blob/master/src/Assets/drinakrd.gif?raw=true" width=500 alt=application-overview>
+<h1>Process</h1>
 
-*CHALLENGES*
-
-The API in itself did not appear to be very organised for easy access; for example, each cocktail would have distinct ingredients and measures, which made it difficult to target  so that we can display them.
-
-*WINS*
-
-This was our first shot at a public API and we were able to build a functional application with it. 
+<p>In building this project we only had 48 hours and as such we needed to logically determine our scale of preference when we set out to build. So we made plans on what we thought was achievable in the timeframe and listed some features that we would like to implement. We spent a short time planning and once we had a clear direction we moved into coding.</p> 
+<p>Our first task was to ensure that we could get the cocktail API to appear on our index page. We created distinct components to be able to interact with each page, we named this first component CocktailIndex, which is returning a mapped component, called CocktailCard</p>
 
 
-*FUTURE FEATURES*
+<pre>
+
+
+
+    const [cocktails, setCocktails] = useState([])
+    const [hasError, setHasError] = useState(false)
+
+    useEffect(() => {
+      const getCocktails = async () => {
+        try {
+          const { data } = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
+          setCocktails(data.drinks)
+        } catch (err) {
+          setHasError(true)
+        }
+      }
+      getCocktails()
+    }, [])
+    
+</pre>
+
+<p>We went further to write the JSX which included the CocktailCard with which we then had a visual idea of how our application would look. We had to map though the data and also introduced some error handling using a ternery to show if an error as occured 'Something has gone wrong!' or to show if the page is still processing as 'loading...🍸'.</p>
+
+```
+
+    <section>
+      <div className="container">
+        {cocktails.length > 0 ? 
+          <div className="columns is-multiline">
+            {cocktails.map(cocktail => {
+              return <CocktailCard key={cocktail.idDrink} {...cocktail} />
+            })}
+          </div>
+          :
+          <h2 className="title has-text-centered">
+            {hasError ? 'Something has gone wrong!' : 'loading...🍸'}
+          </h2>
+        }
+      </div>   
+    </section>
+    
+```
+
+<p>The CocktailCard was written as a different component and styled so as to create a better user experience that when the cocktails cards are hovered on by the user, they seems as though they are lifted. </p>
+
+```
+     
+     const CocktailCard = ({ idDrink, strDrink, strDrinkThumb, strAlcoholic }) => {
+       return (
+         <div className="column is-one-quarter-desktop is-one-third-tablet cocktail-image">
+           <Link to={`/cocktails/${idDrink}`}>
+             <div className="card">
+               <div className="card-header">
+                 <div className="card-header-title">{strDrink}</div>
+               </div>
+               <div className="card-image is-rounded">
+                 <figure className="image image-is-1by1">
+                   <img className="is-rounded" src={strDrinkThumb} alt={strDrink}/>
+                 </figure>
+               </div>
+               <div className="card-content">
+                 <h5>{strAlcoholic}</h5>
+               </div>
+             </div>
+           </Link>
+         </div>
+       )
+     }
+     
+```
+
+ <p>We then a new component called 'CocktailShow' by which on clicking on any of the cocktail, a corresponding page will open with information on that cocktail.</p>
+
+```
+
+
+      const { id } = useParams()
+      const [cocktail, setCocktail] = useState(null)
+      const [hasError, setHasError] = useState(false)
+
+      useEffect(() => {
+        const getCocktails = async () => {
+          try {
+            const { data } = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
+            setCocktail(data.drinks[0])
+            console.log(setCocktail)
+            console.log('Check=>', data)
+          } catch (err) {
+            console.log(err)
+            setHasError(true)
+          }
+        }
+        getCocktails()
+      }, [id])
+
+```
+
+Once these were done and functioning we spent our last half day styling the game into our tropical themed application.
+
+<h1>Screenshots</h1>
+
+Show page
+<img src="https://github.com/victoriaolanipekun/DRINKARD/blob/master/src/Assets/showpage.png?raw=true" width=1000 alt=Index-Screenshot>
+
+Index page
+<img src="https://github.com/victoriaolanipekun/DRINKARD/blob/master/src/Assets/indexpage.png?raw=true" width=1000 alt=Index-Screenshot>
+
+
+<h1>Challenges</h1>
+
+The API in itself did not appear to be very organised for easy access; for example, each cocktail would have distinct ingredients and measures, which made it difficult to target  so that we can display them. We took a shot at this but due to limited time it wasn't completed.
+
+```
+
+     useEffect(() => {
+        if (!cocktail) return 
+        const entries = Object.entries(cocktail)
+        console.log(entries)
+        const filteredIngredients = entries.filter(ingredient => {
+          if (ingredient[0].includes('strIngredient') && ingredient[1] !== null) {
+            return ingredient
+          }
+        })
+        console.log(filteredIngredients)
+      }, [cocktail])
+  
+```
+
+<h1>Wins</h1>
+
+This was our first shot at a public API and we were able to build a functional application with it. This project hugely added to my knowledge on accessing and leveraging API endpoints. Also the project improved my technical communication massively, as we did a pair-coding hackathon remotely, and it was headon a success.
+
+
+<h1>Future Features</h1>
 
 Had there been more time, we would have liked to add a suggestions input where the user can provide a feedback on either cocktails, ingredients or anything he/she would have liked to see.
  
