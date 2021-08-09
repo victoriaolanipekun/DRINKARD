@@ -21,7 +21,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  -->
  
  
-** General Assembly Project 2:**
+![image](https://user-images.githubusercontent.com/71145696/128151120-b3a88874-26e0-4e8c-b2e1-7dea3d5d3b3a.png)<h1> Project #1: Drinkard </h1>
 This was a team of 2 building a React Application which consumed a public API.
  
 ** Timeframe:**
@@ -36,7 +36,7 @@ This was a team of 2 building a React Application which consumed a public API.
  React.js,
  Github/Git
  
- You can find our hosted version here: https://github.com/adrianp2021/DRINKARD
+ You can find our hosted version here: https://drinkard-app.netlify.app
  
 *APPLICATION OVERVIEW*
  
@@ -49,9 +49,12 @@ On the top of the page we devised a navbar which is always present, no matter on
 
 As already stated, 25 cocktails will be displayed on the cocktail page; to create a better experience, when the cocktails are hovered over, they are lifted(see below a snippet of the css)
 
-[Screenshot 2021-06-18 at 11 14 22](https://user-images.githubusercontent.com/83225952/122545957-59de2f00-d026-11eb-89be-768c49032693.png)
+![Screenshot 2021-06-18 at 11 14 22](https://user-images.githubusercontent.com/83225952/122545957-59de2f00-d026-11eb-89be-768c49032693.png)
 
-For each page, we have created distinct components to be able to interact with each page; we named this component CocktailIndex, which is returning a mapped componennt, called CocktailCard: ![Screenshot 2021-06-18 at 11 27 44](https://user-images.githubusercontent.com/83225952/122547595-37e5ac00-d028-11eb-8890-b9116e5abca3.png)
+For each page, we have created distinct components to be able to interact with each page; we named this component CocktailIndex, which is returning a mapped componennt, called CocktailCard:
+
+ 
+![Screenshot 2021-06-18 at 11 27 44](https://user-images.githubusercontent.com/83225952/122547595-37e5ac00-d028-11eb-8890-b9116e5abca3.png)
 
 In the latter we wrote the code so that it renders every cocktail in a column (we styled this with Bulma) ![Screenshot 2021-06-18 at 11 31 00](https://user-images.githubusercontent.com/83225952/122547956-aa568c00-d028-11eb-92f7-27693eceb36a.png)
 
