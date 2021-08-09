@@ -22,7 +22,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  
  
 ![image](https://user-images.githubusercontent.com/71145696/128151120-b3a88874-26e0-4e8c-b2e1-7dea3d5d3b3a.png)<h1> Project #2: Drinkard </h1>
-![Application Overview](https://github.com/victoriaolanipekun/PROJECT-1/blob/main/assets/Screenshot%202021-08-04%20at%2016.54.25.png?raw=true)
+![Application Overview](https://github.com/victoriaolanipekun/PROJECT-1/blob/main/assets/https://github.com/victoriaolanipekun/DRINKARD/blob/master/src/Assets/drinakrd.gif?raw=true)
 
 <h1>Brief</h1>
 
