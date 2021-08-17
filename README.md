@@ -66,7 +66,7 @@ On the top of the page we devised a navbar which is always present, throughout t
 <p>Our first task was to ensure that we could get the cocktail API to appear on our index page. We created distinct components to be able to interact with each page, we named this first component CocktailIndex, which is returning a mapped component, called CocktailCard</p>
 
 
-<pre>
+```javascript
 
 
 
@@ -85,11 +85,11 @@ On the top of the page we devised a navbar which is always present, throughout t
       getCocktails()
     }, [])
     
-</pre>
+```
 
 <p>We went further to write the JSX which included the CocktailCard with which we then had a visual idea of how our application would look. We had to map though the data and also introduced some error handling using a ternery to show if an error as occured 'Something has gone wrong!' or to show if the page is still processing as 'loading...🍸'.</p>
 
-```
+```javascript
 
     <section>
       <div className="container">
@@ -111,7 +111,7 @@ On the top of the page we devised a navbar which is always present, throughout t
 
 <p>The CocktailCard was written as a different component and styled so as to create a better user experience that when the cocktails cards are hovered on by the user, they seems as though they are lifted. </p>
 
-```
+```javascript
      
      const CocktailCard = ({ idDrink, strDrink, strDrinkThumb, strAlcoholic }) => {
        return (
@@ -139,8 +139,7 @@ On the top of the page we devised a navbar which is always present, throughout t
 
  <p>We then a new component called 'CocktailShow' by which on clicking on any of the cocktail, a corresponding page will open with information on that cocktail.</p>
 
-```
-
+```javascript
 
       const { id } = useParams()
       const [cocktail, setCocktail] = useState(null)
@@ -178,7 +177,7 @@ Index page
 
 The API in itself did not appear to be very organised for easy access; for example, each cocktail would have distinct ingredients and measures, which made it difficult to target  so that we can display them. We took a shot at this but due to limited time it wasn't completed.
 
-```
+```javascript
 
      useEffect(() => {
         if (!cocktail) return 
