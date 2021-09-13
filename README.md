@@ -24,6 +24,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ![image](https://user-images.githubusercontent.com/71145696/128151120-b3a88874-26e0-4e8c-b2e1-7dea3d5d3b3a.png)<h1> Project #2: Drinkard </h1>
 <img src="https://github.com/victoriaolanipekun/DRINKARD/blob/master/src/Assets/homepage.png?raw=true" width=1000 alt=Homepage-Screenshot>
 
+<h1>Overview</h1>
+<p>This project was my second project for the Software Engineering Immersive course at General Assembly London, which was done in a team of 2. The aim was to get information from a third party API and then implement our application creatively. We decided on the cocktail API and named our application DRINKARD.</p>
+<p>DRINKARD is an application which hosts a variety of 25 cocktails. The page loads with a "Welcome to DRINAKARD 🍸" display, with the glass being clickable. If the user clicks on the glass, it will direct him/her to the cocktails page. 
+On the top of the page we devised a navbar which is always present, throughout the different application pages; this way, the user can either return to the homepage (by clicking on the home icon) or click on the glass to redirect to the cocktail page.
+</p>
+
 <h1>Brief</h1>
 
 <p>This was our second project in GA which we were expected to build a React.js app consuming a 3rd party public API, and was to be pair coded in 48 hours.</p>
@@ -38,11 +44,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <p>You can find our hosted version here: https://drinkard-app.netlify.app</p>
 <p>Repository link: https://github.com/victoriaolanipekun/DRINKARD</p>
 
-<h1>Motivation & Introduction</h1>
-<p>This project was my second project for the Software Engineering Immersive course, which was done in a team of 2. The aim was to get information from a third party API and then implement our application creatively. We decided on the cocktail API and named our application DRINKARD.</p>
-<p>DRINKARD is an application which hosts a variety of 25 cocktails. The page loads with a "Welcome to DRINAKARD 🍸" display, with the glass being clickable. If the user clicks on the glass, it will direct him/her to the cocktails page. 
-On the top of the page we devised a navbar which is always present, throughout the different application pages; this way, the user can either return to the homepage (by clicking on the home icon) or click on the glass to redirect to the cocktail page.
-</p>
 
 <h1>Technologies used</h1>
 <li>HTML5</li>
@@ -60,10 +61,11 @@ On the top of the page we devised a navbar which is always present, throughout t
 
 <h1>Demonstration of the App Flow</h1>
 <img src="https://github.com/victoriaolanipekun/DRINKARD/blob/master/src/Assets/drinakrd.gif?raw=true" width=500 alt=application-overview>
-<h1>Process</h1>
+
+<h1>Approach</h1>
 
 <p>In building this project we only had 48 hours and as such we needed to logically determine our scale of preference when we set out to build. So we made plans on what we thought was achievable in the timeframe and listed some features that we would like to implement. We spent a short time planning and once we had a clear direction we moved into coding.</p> 
-<p>Our first task was to ensure that we could get the cocktail API to appear on our index page. We created distinct components to be able to interact with each page, we named this first component CocktailIndex, which is returning a mapped component, called CocktailCard</p>
+<p>Our first task was to ensure that we could get the cocktail API to appear on our index page. We created distinct components to be able to interact with each page, we named this first component CocktailIndex, which is returning a mapped component, called CocktailCard.</p>
 
 
 ```javascript
@@ -87,7 +89,7 @@ On the top of the page we devised a navbar which is always present, throughout t
     
 ```
 
-<p>We went further to write the JSX which included the CocktailCard with which we then had a visual idea of how our application would look. We had to map though the data and also introduced some error handling using a ternery to show if an error as occured 'Something has gone wrong!' or to show if the page is still processing as 'loading...🍸'.</p>
+<p>We went further to write the JSX which included the CocktailCard with which we then had a visual idea of how our application would look. We had to map through the data and also introduced some error handling using a ternery to show if an error occurred 'Something has gone wrong!' or to show if the page is still processing as 'loading...🍸'.</p>
 
 ```javascript
 
@@ -109,7 +111,7 @@ On the top of the page we devised a navbar which is always present, throughout t
     
 ```
 
-<p>The CocktailCard was written as a different component and styled so as to create a better user experience that when the cocktails cards are hovered on by the user, they seems as though they are lifted. </p>
+<p>The CocktailCard was written as a different component and styled so as to create a better user experience that when the cocktails cards are hovered on by the user, seems as though they are lifted. </p>
 
 ```javascript
      
@@ -137,7 +139,7 @@ On the top of the page we devised a navbar which is always present, throughout t
      
 ```
 
- <p>We then a new component called 'CocktailShow' by which on clicking on any of the cocktail, a corresponding page will open with information on that cocktail.</p>
+ <p>We then added a new component called 'CocktailShow' by which on clicking on any of the cocktail, a corresponding page will open with information on that cocktail.</p>
 
 ```javascript
 
@@ -201,7 +203,11 @@ This was our first shot at a public API and we were able to build a functional a
 <h1>Future Features</h1>
 
 Had there been more time, we would have liked to add a suggestions input where the user can provide a feedback on either cocktails, ingredients or anything he/she would have liked to see.
- 
+
+
+<h1>Key learnings</h1>
+
+This project hugely added to my knowledge on accessing and leveraging API endpoints. Also the project improved my technical communication massively: as we did a pair-coding hackathon remotely, any challenges, communication or otherwise, were a challenge to overcome, and we did just that.
  
  
  
